@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meeting Minutes</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Tech Team Meeting Minutes</h1>
+        <p>Date: April 13, 2026</p>
+        <p>Location: Student Services Center 554</p>
+        <hr>
+        <nav>
+            <a href="#attendees">Attendees</a> |
+            <a href="#agenda">Agenda</a> |
+            <a href="#notes">Meeting Notes</a> |
+            <a href="#media">Media</a>
+        </nav>
+    </header>
+    <main>
+        <section id="attendees">
+            <h2>Attendees</h2>
+            <ul>
+                <li>Timothy W</li>
+                <li>Ethan</li>
+                <li>Jacky</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Check-In &amp; Updates</li>
+                <li>Arcade Machine Porting</li>
+                <li>Website Goals</li>
+            </ol>
+        </section>
+        <hr>
+        <section id="notes">
+            <h2>Meeting Notes</h2>
+            <div>
+                <p><b>Timothy:</b> Working on injection mold project, <strong>unable to help with other projects this week</strong>.</p>
+            </div>
+            <div>
+                <p><b>Ethan:</b> Progress on arcade machine porting, expecting to have a working prototype by <em>next week</em>.</p>
+            </div>
+            <div>
+                <p><b>Jacky:</b> Keeps saying he will do something <i>soon&trade;</i>. <span>(still waiting)</span></p>
+            </div>
+            <details>
+                <summary>Additional Notes</summary>
+                <h3>Next Steps</h3>
+                <p>Next meeting scheduled for <em>June 27, 2024</em>. All members should come prepared with progress updates.</p>
+            </details>
+        </section>
+        <hr>
+        <section id="media">
+            <h2>Media</h2>
+            <img src="screenshots/example.png" alt="Meeting screenshot"><br>
+            <audio controls>
+                <source src="meeting-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio><br>
+            <video controls>
+                <source src="meeting-recording.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+    <footer>
+        <form action="/submit-feedback" method="post">
+            <fieldset>
+                <legend>Meeting Feedback</legend>
+                Name: <input type="text" name="name"><br>
+                Date: <input type="date" name="date"><br>
+                Rating:
+                <input type="radio" name="rating" value="good"> Good
+                <input type="radio" name="rating" value="bad"> Bad<br>
+                Relevant Topics:
+                <input type="checkbox" name="topic" value="checkin"> Check-In
+                <input type="checkbox" name="topic" value="arcade"> Arcade Machine<br>
+                Pointless Dropdown: <input type="text" name="pain" list="dept-options">
+                <datalist id="dept-options">
+                    <option value="option 1">
+                    <option value="option 2">
+                    <option value="option 3">
+                </datalist><br>
+                To what extent do you feel you live a purposeful life?:
+                <select name="overall">
+                    <option value="5">yeah</option>
+                    <option value="4">ok</option>
+                    <option value="3">eh</option>
+                    <option value="2">meh</option>
+                    <option value="1">no</option>
+                </select><br>
+                Comments that I won't read:<br>
+                <textarea name="feedback" rows="4" cols="50"></textarea><br>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </footer>
+</body>
+</html>
