@@ -3,20 +3,51 @@
 <head>
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+<!--    external font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        details {
+            background-color: #f0f4ff;
+            border: 1px solid #c0cfff;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        summary:hover {
+            color: #297892;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid #297892;
+            outline-offset: 2px;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <span class="nav-title">Meeting Minutes</span>
+        <div class="nav-links">
+            <a href="#attendees">Attendees</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#notes">Notes</a>
+            <a href="#media">Media</a>
+        </div>
+    </nav>
     <header>
         <h1>Tech Team Meeting Minutes</h1>
         <p>Date: April 13, 2026</p>
         <p>Location: Student Services Center 554</p>
-        <hr>
-        <nav>
-            <a href="#attendees">Attendees</a> |
-            <a href="#agenda">Agenda</a> |
-            <a href="#notes">Meeting Notes</a> |
-            <a href="#media">Media</a>
-        </nav>
     </header>
     <main>
         <section id="attendees">
@@ -39,14 +70,15 @@
         <hr>
         <section id="notes">
             <h2>Meeting Notes</h2>
-            <div>
+            <div class="note-item">
                 <p><b>Timothy:</b> Working on injection mold project, <strong>unable to help with other projects this week</strong>.</p>
             </div>
-            <div>
+            <div class="note-item">
                 <p><b>Ethan:</b> Progress on arcade machine porting, expecting to have a working prototype by <em>next week</em>.</p>
             </div>
-            <div>
-                <p><b>Jacky:</b> Keeps saying he will do something <i>soon&trade;</i>. <span>(still waiting)</span></p>
+            <div class="note-item">
+                <!-- inline CSS example on the span below -->
+                <p><b>Jacky:</b> Keeps saying he will do something <i>soon&trade;</i>. <span style="color: crimson;">(still waiting)</span></p>
             </div>
             <details>
                 <summary>Additional Notes</summary>
@@ -68,6 +100,8 @@
             </video>
         </section>
     </main>
+<!--    contrived hidden note -->
+    <p class="hidden-note">you should not see me!</p>
     <footer>
         <form action="/submit-feedback" method="post">
             <fieldset>
